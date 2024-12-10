@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+.container {
+    width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.booking-section {
+    display: flex;
+    gap: 20px;
+}
+.calendar {
+    width: 50%;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+#calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.time-slots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.time-slot-buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.time-slot-buttons button.selected {
+    background-color: #0066cc;
+    color: white;
+}
+
+#time-slot-buttons button:hover {
+    background-color: #c0c0c0;
+}
+
+#set-date-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#set-date-btn:hover {
+    background-color: #004a99;
+}
+.appointment-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.calendar {
+    width: 60%;
+}
+
+.time-slots {
+    width: 35%;
+    padding-left: 20px;
+}
+
+.time-slot-buttons button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.time-slot-buttons button.selected {
+    background-color: #0066cc;
+    color: white;
+}
+
+#set-date-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#set-date-btn:hover {
+    background-color: #004a99;
+}
+
+.set-date-time-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#calendar-table th, #calendar-table td {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+}
+#calendar-table td button {
+    background: none;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#calendar-table td button:hover, #calendar-table td button.selected {
+    background-color: #0066cc;
+    color: white;
+}
+.time-slots {
+    width: 50%;
+}
+#times {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+#times button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e6e6e6;
+}
+#times button:hover {
+    background-color: #0066cc;
+    color: white;
+}
+}
+#payment-button {
+    background: linear-gradient(45deg, #0066cc, #0066cc);
+    color: white;
+    border: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#payment-button:hover {
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+    box-shadow: 0px 6px 12px rgba(36, 9, 241, 0.888);
+}
+
+#payment-button:active {
+    transform: scale(0.98);
+    box-shadow: 0px 2px 6px rgba(36, 9, 241, 0.888);
+}

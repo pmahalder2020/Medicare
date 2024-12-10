@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>OTP Verification Form</title>
+    <link rel="stylesheet" href="styleotp.css" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+   <script src="scriptotp.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <i class="bx bxs-check-shield"></i>
+      </header>
+      <h4>Enter OTP Code</h4>
+        <p>Sent in your registered number</p>
+      
+      <form action="#">
+        <div class="input-field">
+          <input type="number" />
+          <input type="number" disabled />
+          <input type="number" disabled />
+          <input type="number" disabled />
+        </div>
+        <button>Verify OTP</button> <a href="popup.html">Submit</a></button>
+        <div class="timer" id="timer">Time remaining: 00:30</div>
+        <div class="resend-link" id="resend-link" onclick="resendOTP()">Resend OTP</div>
+      </div>
+    
+      <script>
+        let timerDuration = 30; // Timer in seconds
+        const timerDisplay = document.getElementById("timer");
+        const resendLink = document.getElementById("resend-link");
+    
+        function startTimer() {
+          let timeLeft = timerDuration;
+          const interval = setInterval(() => {
+            const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+            const seconds = (timeLeft % 60).toString().padStart(2, '0');
+            timerDisplay.innerText = `Time remaining: ${minutes}:${seconds}`;
+            
+            if (timeLeft <= 0) {
+              clearInterval(interval);
+              timerDisplay.style.display = "none";
+              resendLink.style.display = "inline"; // Show resend option
+            }
+            timeLeft--;
+          }, 1000);
+        }
+    
+        function resendOTP() {
+          timerDisplay.style.display = "block";
+          resendLink.style.display = "none";
+          startTimer(); // Restart the timer
+        }
+    
+        startTimer(); // Initialize the timer on page load
+      </script>
+    </body>
+    </html>
+    
+
+      
+      </form>
+    </div>
+    
+  </body>
+</html>
